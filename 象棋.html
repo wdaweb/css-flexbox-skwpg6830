@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 標楷體;
+        }
+
+        #box {
+            width: 700px;
+            height: 900px;
+            margin: auto;
+            display: flex;
+            position: relative;
+        }
+
+        #box1 {
+            width: 700px;
+            height: 800px;
+            border: 1px solid black;
+            margin: auto;
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #box2 {
+            width: 600px;
+            height: 693px;
+            border: 1px solid black;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .row-container {
+            display: flex;
+        }
+
+        .row {
+            width: 75px;
+            height: 75px;
+            border: 1px solid black;
+        }
+
+        #river{
+            width: 599px;
+            height: 75px;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 75px;
+            font-size: 45px;
+        }
+
+        #river span{
+            padding: 100px;
+        }
+
+        #black{
+            width: 660px;
+            height: 90px;
+            /* border: 1px solid red; */
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 2;
+        }
+
+        #black1{
+            width: 515px;
+            height: 90px;
+            /* border: 1px solid red; */
+            position: absolute;
+            top: 160px;
+            left: 90px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #black2{
+            width: 655px;
+            height: 90px;
+            /* border: 1px solid red; */
+            position: absolute;
+            top: 240px;
+            left: 20px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .b{
+            background: white;
+            width: 60px;
+            height: 60px;
+            border: 1px solid black;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 60px;
+            font-size: 50px;
+        }
+
+        #red{
+            width: 660px;
+            height: 90px;
+            /* border: 1px solid red; */
+            position: absolute;
+            bottom: 10px;
+            left: 20px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 2;
+        }
+
+        #red1{
+            width: 515px;
+            height: 90px;
+            /* border: 1px solid red; */
+            position: absolute;
+            bottom: 160px;
+            left: 90px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #red2{
+            width: 655px;
+            height: 90px;
+            /* border: 1px solid red; */
+            position: absolute;
+            bottom: 240px;
+            left: 20px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .r{
+            background: white;
+            width: 60px;
+            height: 60px;
+            border: 1px solid black;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 60px;
+            font-size: 50px;
+            color: red;
+        }
+
+        #t1, #t2 {
+            font-size: 40px;
+            writing-mode: vertical-lr;
+            position: absolute;
+            top: 40px;
+        }
+
+        #t1 {
+            left: -80px;
+        }
+
+        #t2 {
+            right: -80px;
+        }
+        #box2::before,
+        #box2::after {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 206px;
+            background-color: black;
+        }
+
+        #box2::before {
+            top: 0;
+            left: 274px;
+            transform: rotate(45deg);
+            transform-origin: bottom left;
+        }
+
+        #box2::after {
+            top: 0;
+            right: 274px;
+            transform: rotate(-45deg);
+            transform-origin: bottom right;
+        }
+
+        #box1::before,
+        #box1::after {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 213px;
+            background-color: black;
+        }
+
+        #box1::before {
+            top: 530px;
+            left: 274px;
+            transform: rotate(45deg);
+            transform-origin: bottom left;
+        }
+
+        #box1::after {
+            top: 530px;
+            right: 274px;
+            transform: rotate(-45deg);
+            transform-origin: bottom right;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="t1">棋盤裡，車無輪，馬無韁，叫聲將軍提防提防</div>
+        <div id="box1">
+            <div id="box2">
+                <div class="row-container" id="r1">
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                </div>
+                <div class="row-container" id="r2">
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                </div>
+                <div class="row-container" id="r3">
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                </div>
+                <div class="row-container" id="r4">
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                </div>
+                <div id="river"><span>楚河</span><span>漢界</span></div>
+                <div class="row-container" id="r5">
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                </div>
+                <div class="row-container" id="r6">
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                </div>
+                <div class="row-container" id="r7">
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                </div>
+                <div class="row-container" id="r8">
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                </div>
+                <div id="black">
+                <div class="b">車</div>
+                <div class="b">馬</div>
+                <div class="b">象</div>
+                <div class="b">士</div>
+                <div class="b">將</div>
+                <div class="b">士</div>
+                <div class="b">象</div>
+                <div class="b">馬</div>
+                <div class="b">車</div>
+            </div>
+            <div id="black1">
+                <div class="b">包</div>
+                <div class="b">包</div>
+            </div>
+            <div id="black2">
+                <div class="b">卒</div>
+                <div class="b">卒</div>
+                <div class="b">卒</div>
+                <div class="b">卒</div>
+                <div class="b">卒</div>
+            </div>
+            <div id="red">
+                <div class="r">俥</div>
+                <div class="r">傌</div>
+                <div class="r">相</div>
+                <div class="r">仕</div>
+                <div class="r">帥</div>
+                <div class="r">仕</div>
+                <div class="r">相</div>
+                <div class="r">傌</div>
+                <div class="r">俥</div>
+            </div>
+            <div id="red1">
+                <div class="r">炮</div>
+                <div class="r">炮</div>
+            </div>
+            <div id="red2">
+                <div class="r">兵</div>
+                <div class="r">兵</div>
+                <div class="r">兵</div>
+                <div class="r">兵</div>
+                <div class="r">兵</div>
+            </div>
+            </div>
+        </div>
+        <div id="t2">圖畫裡，龍不吟，虎不嘯，小小書僮可笑可笑</div>
+    </div>
+</body>
+</html>
